@@ -15,9 +15,9 @@ u_c(0-) = u_c(0+) = U_\mathrm{CO}.
 $$
 S využitím napěťového Kirchhoffova zákona lze zapsat napětí v uzavřené smyčce 
 $$
-Ri + u_\mathrm{C} = 0,
+Ri + u_\mathrm{C} = 0.
 $$
-kde proud obvodem lze vyjádřit ve tvaru 
+Proud obvodem lze vyjádřit ve tvaru 
 $$
 i = C \frac{\dif u_\mathrm{C}}{\dif t}.
 $$
@@ -44,19 +44,19 @@ $$
 $$ 
 nazýváme časovou konstantou. 
 
-Partikulární řešení představuje ustálený stav. Je zřejmé, že po odeznění přechodného děje bude plně kapacitor vybit
+Partikulární řešení představuje ustálený stav. Je zřejmé, že po odeznění přechodného děje bude kapacitor plně vybit
 $$
 u_p = u_\mathrm{C}(\infty) = 0.
 $$
-Napětí na kapacitoru získáme jako součet obecného a partikulárního řešení
+Napětí na kapacitoru získáme jako součet obecného a partikulárního řešení ve tvaru
 $$
 u_\mathrm{C} = u_o + u_p = K \cdot \me^{-\frac{t}{RC}}.
 $$
-Aplikujeme počáteční podmínku $u_c(0+) = U_\mathrm{CO}$
+Aplikujeme počáteční podmínku napětí na kapacitoru $u_c(0+) = U_\mathrm{CO}$
 $$
 U_\mathrm{CO} = K \cdot \lim_{t \rightarrow 0} \left( \me^{-\frac{t}{RC}} \right) = K
 $$
-a ihned získáme neznámou konstantu $K = U_\mathrm{CO}$. Časový průběh napětí na kapacitoru je zobrazen na obrázku \ref{fig:prvni_rad_rc_graf_u} a lze vyjádřit ve tvaru
+a ihned získáme neznámou konstantu $K = U_\mathrm{CO}$. Časový průběh napětí na kapacitoru $u_c(t)$ je zobrazen na obrázku \ref{fig:prvni_rad_rc_graf_u} a lze vyjádřit ve tvaru
 \begin{equation}
 u_\mathrm{C} = U_\mathrm{CO} \cdot \me^{-\frac{t}{RC}}.
 \label{eq:prvni_rad_rc_u}
@@ -67,7 +67,6 @@ u_\mathrm{C} = U_\mathrm{CO} \cdot \me^{-\frac{t}{RC}}.
 \caption{Časový průběh napětí na kapacitoru}
 \label{fig:prvni_rad_rc_graf_u}
 \end{figure}
-
 Proud obvodem je vidíme na obrázku \ref{fig:prvni_rad_rc_graf_i} a získáme ho derivací napětí na kapacitoru
 $$
 i = C \frac{\dif u_\mathrm{C}}{\dif t} = - \frac{U_\mathrm{CO}}{R} \cdot \me^{-\frac{t}{RC}}.
@@ -79,11 +78,11 @@ $$
 \label{fig:prvni_rad_rc_graf_i}
 \end{figure}
 
-Význam časové konstanty je patrný z následující úvahy. Nejprve dosadím za čas do vztahu (\ref{eq:prvni_rad_rc_u}) a získáme
+Význam časové konstanty je patrný z následující úvahy. Nejprve dosadíme za čas do vztahu (\ref{eq:prvni_rad_rc_u}) časovou konstantu $\tau$ a získáme
 $$
 u_\mathrm{C}(\tau) = U_\mathrm{CO} \cdot \me^{-\frac{\tau}{\tau}} = U_\mathrm{CO} \cdot \me^{-1} = 0,368 \cdot U_\mathrm{CO}.
 $$
-Je zřejmé, že za dobu jedné časové konstanty klesne napětí na kapacitoru na 37 \% napětí na počátku přechodného děje. Z obrázku \ref{fig:prvni_rad_rc_graf_tau} je patrný vliv velikosti časové konstant na rychlost přechodného děje. Menší hodnota časové konstanty způsobí rychlejší dosažení ustáleného stavu. Obvod můžeme považovat za ustálený za dobu $(3-5)\tau$.
+Je zřejmé, že za dobu jedné časové konstanty klesne napětí na kapacitoru na 37 \% napětí na počátku přechodného děje. Z obrázku \ref{fig:prvni_rad_rc_graf_tau} je patrný vliv velikosti časové konstant na rychlost přechodného děje. Menší hodnota časové konstanty způsobí rychlejší dosažení ustáleného stavu. Obvod můžeme považovat za ustálený za dobu $5\tau$ kdy napětí klesne na 0,7~\% své původní hodnoty.
 \begin{figure}[h!]
 \centering
 \includegraphics[]{prechodne_jevy/prvni_rad/rc_graf_tau.pdf}
