@@ -1,0 +1,119 @@
+\documentclass[a4paper, oneside, 11pt]{book}
+
+\textwidth 145mm
+\topmargin -2mm
+\textheight 235mm
+
+\oddsidemargin 0mm
+\evensidemargin 0mm
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[]{quotchap}
+\usepackage{rotating}
+\usepackage{mdwlist}
+\usepackage{subfig}
+\usepackage{wasysym}
+\usepackage{siunitx}
+
+% nastaveni zahlavi
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[L]{} 
+\fancyfoot[R]{} 
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt} 
+\fancyhead{}
+\fancyhead[RO]{\rightmark} % \sffamily\bfseries 
+\fancyhead[LE]{\leftmark} % \sffamily\bfseries 
+
+% nastaveni nazvu kapitoly
+\renewcommand\chapterheadstartvskip{\vspace*{-4\baselineskip}}
+
+\DeclareMathAlphabet{\mathsfb}{T1}{lcmss}{b}{sl}  % tučné bezpatkové písmo
+
+\newcommand{\me}{\mathrm{e}} % Eulerovo cislo
+\newcommand{\mi}{\mathrm{i}} % komplexni jednotka
+\newcommand{\mj}{\mathrm{j}} % komplexni jednotka
+\newcommand{\dif}{\,\mathrm{d}} % diferencial
+\newcommand{\mat}[1]{\mathrm{\mathbf{{#1}}}} % tenzor nebo matice
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}} % vektor
+\newcommand{\faz}[1]{{\underline{#1}}} % fazor
+\newcommand{\vecfaz}[1]{\mbox{\underline{\boldmath$#1$}}} % fazor vektoru
+\newcommand*{\unit}[1]{\ensuremath{\mathrm{\,#1}}} % jednotky
+\newcommand{\degree}{\ensuremath{^{\circ}}} % stupne celsia
+
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\Im}{\mathrm{Im}}
+\newcommand{\tg}{\mathrm{tg}\ }
+\newcommand{\grad}{\mathrm{grad}\ }
+\newcommand{\curl}{\mathrm{curl}\ }
+\newcommand{\rot}{\mathrm{rot}\ }
+\renewcommand{\div}{\mathrm{div}\ }
+\newcommand{\const}{\mathrm{const}}
+\newcommand{\konst}{\mathrm{konst}}
+
+\renewcommand\arraystretch{1.2} % nastaveni vysky bunek tabulek
+
+\makeatletter
+\g@addto@macro\@verbatim\footnotesize
+\makeatother 
+
+\begin{document}
+
+\input{uvod/titulni_strana}
+
+\newpage
+\textbf{ }
+
+\newpage
+\textbf{ }
+
+\renewcommand\thepage{}
+\tableofcontents
+
+\newpage
+\textbf{ }
+
+\renewcommand\thepage{\arabic{page}}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\input{uvod/anotace}
+
+\chapter{Přechodné jevy v elektrických obvodech}
+\input{prechodne_jevy/uvod}
+\input{prechodne_jevy/prvni_rad}
+\input{prechodne_jevy/druhy_rad}
+\input{prechodne_jevy/specialni}
+\input{prechodne_jevy/stavove_promenne}
+
+%\chapter{Nelineární obvody}
+%\input{nelinearni_obvody/uvod}
+%\input{nelinearni_obvody/analyza}
+
+%\chapter{Stacionární elektromagnetické pole}
+%\include{stacionarni_pole/vlastnosti}
+%\include{stacionarni_pole_elektricke/elektricke}
+%\include{stacionarni_pole_proudove/proudove}
+%\include{magneticke_obvody/magneticke_obvody}
+%\include{energie/energie}
+
+\bibliographystyle{unsrt}
+%\bibliography{bib_world}
+
+% \listoffigures
+% \listoftables
+
+\appendix
+
+% \chapter{Vektorová analýza -- diferenciální a~integrální operátory}
+% \input{prilohy/vektorova_analyza/vektorova_analyza}
+
+\end{document}
