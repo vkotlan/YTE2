@@ -9,7 +9,7 @@ Uvažujme elektrický obvod na obrázku \ref{fig:prvni_rad_rc} tvořený rezisto
 \caption{Obvod prvního řádu s rezistorem a kapacitorem}
 \label{fig:prvni_rad_rc}
 \end{figure}
-Kapacitor je nabit na napětí $U_\mathrm{CO}$, předpokládáme počáteční podmínku ve tvaru
+Kapacitor je nabit na napětí $U_\mathrm{CO}$, ze spojitosti stavové proměnné předpokládáme počáteční podmínku ve tvaru
 $$
 u_c(0-) = u_c(0+) = U_\mathrm{CO}.
 $$
@@ -34,11 +34,11 @@ $$
 $$
 u_o = K \cdot \me^{\lambda t},
 $$
-kde $K$ a $\lambda$ jsou neznámé konstanty. Konstantu $\lambda$ získáme řešením charakteristické rovnice k diferenciální rovnici (\ref{eq:prvni_rad_rc_dif_rce})
+kde $K$ a $\lambda$ jsou neznámé konstanty. Konstantu $\lambda$ získáme řešením charakteristické rovnice\footnote{Charakteristickou rovnici získáme tak, že do diferenciální rovnice dosadíme předpokládaná řešení stavové proměnné.} k diferenciální rovnici (\ref{eq:prvni_rad_rc_dif_rce})
 $$
 RC \cdot \lambda + 1 = 0.
 $$
-Převrácenou hodnotu řešení charakteristické rovnice $\lambda = - \frac{1}{RC}$
+Zápornou převrácenou hodnotu řešení charakteristické rovnice $\lambda = - \frac{1}{RC}$
 $$
 \tau = - \frac{1}{\lambda} = RC
 $$ 
@@ -67,7 +67,7 @@ u_\mathrm{C} = U_\mathrm{CO} \cdot \me^{-\frac{t}{RC}}.
 \caption{Časový průběh napětí na kapacitoru}
 \label{fig:prvni_rad_rc_graf_u}
 \end{figure}
-Proud obvodem je vidíme na obrázku \ref{fig:prvni_rad_rc_graf_i} a získáme ho derivací napětí na kapacitoru
+Proud obvodem vidíme na obrázku \ref{fig:prvni_rad_rc_graf_i} a získáme ho derivací napětí na kapacitoru
 $$
 i = C \frac{\dif u_\mathrm{C}}{\dif t} = - \frac{U_\mathrm{CO}}{R} \cdot \me^{-\frac{t}{RC}}.
 $$
